@@ -16,6 +16,10 @@ public:
     std::vector<Task> tasks;
 
     void addTask(const std::string& description) {
+        if (description.empty()) {
+            std::cout << "Description cannot be empty\n";
+            return;
+        }
         tasks.emplace_back(description);
     }
 
