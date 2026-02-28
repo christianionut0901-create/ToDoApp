@@ -57,6 +57,21 @@ public:
             std::cout << "Invalid index\n";
         }
     }
+    void searchTasks(const std::string& keyword) const {
+        bool found = false;
+
+        for (size_t i = 0; i < tasks.size(); ++i) {
+            if (tasks[i].description.find(keyword) != std::string::npos) {
+                std::cout << i << ": " << tasks[i].description
+                          << (tasks[i].done ? " [DONE]\n" : " [TODO]\n");
+                found = true;
+            }
+        }
+
+        if (!found) {
+            std::cout << "No matching tasks\n";
+        }
+    }
 };
 
 int main() {
@@ -68,7 +83,8 @@ int main() {
                   << "3 Mark task done\n"
                   << "4 Delete task\n"
                   << "5 Edit task\n"
-                  << "6 Exit\n"
+                  << "6 Search tasks\n"
+                  << "7 Exit\n"
                   << "Choose: ";
 
         int choice = 0;
@@ -112,10 +128,13 @@ int main() {
             todo.editTask(index, newDesc);
         }
         else if (choice == 6) {
-            break;
+            std::cout << "Keyword: ";
+            std::string keyword;
+            std::getline(std::cin >> std::ws, keyword);
+            todo.searchTasks(keyword);
         }
-        else {
-            std::cout << "Invalid choice\n";
+        else if (choice == 7) {
+            break;
         }
     }
 
