@@ -48,6 +48,15 @@ public:
             std::cout << "Invalid index\n";
         }
     }
+
+    void editTask(size_t index, const std::string& newDescription) {
+        if (index < tasks.size()) {
+            tasks[index].description = newDescription;
+            std::cout << "Task updated\n";
+        } else {
+            std::cout << "Invalid index\n";
+        }
+    }
 };
 
 int main() {
@@ -58,7 +67,8 @@ int main() {
                   << "2 View tasks\n"
                   << "3 Mark task done\n"
                   << "4 Delete task\n"
-                  << "5 Exit\n"
+                  << "5 Edit task\n"
+                  << "6 Exit\n"
                   << "Choose: ";
 
         int choice = 0;
@@ -90,6 +100,18 @@ int main() {
             todo.deleteTask(index);
         }
         else if (choice == 5) {
+            size_t index;
+            std::cout << "Enter task index to edit: ";
+            std::cin >> index;
+            std::cin.ignore(10000, '\n');
+
+            std::cout << "New description: ";
+            std::string newDesc;
+            std::getline(std::cin, newDesc);
+
+            todo.editTask(index, newDesc);
+        }
+        else if (choice == 6) {
             break;
         }
         else {
