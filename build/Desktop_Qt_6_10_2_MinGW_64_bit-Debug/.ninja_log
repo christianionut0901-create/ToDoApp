@@ -1,8 +1,0 @@
-# ninja log v6
-8	143	7939908864366586	ToDoApp_autogen/timestamp	bf22b44d864bace7
-8	143	7939908864366586	ToDoApp_autogen/mocs_compilation.cpp	bf22b44d864bace7
-8	143	7939908864366586	C:/Users/chris/OneDrive/Documents/ToDoApp/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ToDoApp_autogen/timestamp	bf22b44d864bace7
-8	143	7939908864366586	C:/Users/chris/OneDrive/Documents/ToDoApp/build/Desktop_Qt_6_10_2_MinGW_64_bit-Debug/ToDoApp_autogen/mocs_compilation.cpp	bf22b44d864bace7
-146	196	7939908864739485	CMakeFiles/ToDoApp.dir/ToDoApp_autogen/mocs_compilation.cpp.obj	f265d5db74790e16
-150	541	7939908864775044	CMakeFiles/ToDoApp.dir/main.cpp.obj	cca11de6800e670e
-542	648	7939908868705135	ToDoApp.exe	26f24c06c21ca81c
