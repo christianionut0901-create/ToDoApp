@@ -29,10 +29,14 @@ public:
             return;
         }
 
+        std::cout << "\n----- TASK LIST -----\n";
+
         for (size_t i = 0; i < tasks.size(); ++i) {
-            std::cout << i << ": " << tasks[i].description
+            std::cout << i + 1 << ". " << tasks[i].description
                       << (tasks[i].done ? " [DONE]\n" : " [TODO]\n");
         }
+
+        std::cout << "---------------------\n";
     }
 
     void markDone(size_t index) {
