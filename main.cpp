@@ -53,6 +53,11 @@ public:
     }
 
     void deleteTask(size_t index) {
+        if (tasks.empty()) {
+            std::cout << "No tasks to delete\n";
+            return;
+        }
+
         if (index < tasks.size()) {
             tasks.erase(tasks.begin() + index);
             std::cout << "Task deleted\n";
