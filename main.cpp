@@ -41,6 +41,10 @@ public:
 
     void markDone(size_t index) {
         if (index < tasks.size()) {
+            if (tasks[index].done) {
+                std::cout << "Task already completed\n";
+                return;
+            }
             tasks[index].done = true;
             std::cout << "Task marked as done\n";
         } else {
